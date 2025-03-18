@@ -23,9 +23,9 @@ run:
 	echo "Successfully compiled to $${filename}" && \
 	echo "" && \
 	echo "Running $${filename}..." && \
-	echo "========== OUTPUT ==========" && \
+	echo "====================" && \
 	./"$${filename}" && \
-	echo "============================="
+	echo " "
 	
 clean:
 	@find . -type f -executable -delete

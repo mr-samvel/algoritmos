@@ -1,1 +1,1 @@
-Sulamericana 2023-24
+2024 ICPC Latin America Championship
