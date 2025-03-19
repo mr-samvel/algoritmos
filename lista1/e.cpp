@@ -1,11 +1,10 @@
 #include <iostream>
 #include <vector>
 #include <stack>
-#include <string>
 #include <algorithm>
 using namespace std;
 
-void readInput(int &N, vector<int> &events, vector<int> &out_time) {
+void read_input(int &N, vector<int> &events, vector<int> &out_time) {
     cin >> N;
 
     events.resize(2*N);
@@ -74,7 +73,7 @@ int main() {
     int n;
     vector<int> events, out_time;
     
-    readInput(n, events, out_time);
+    read_input(n, events, out_time);
     vector<char> solution = solve(events, out_time);
     for (char s : solution)
         cout << s;

@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-void readInput(int &R, int &C, int &K, vector<string> &matrix, vector<string> &pattern) {
+void read_input(int &R, int &C, int &K, vector<string> &matrix, vector<string> &pattern) {
     cin >> R >> C >> K;
     
     matrix.resize(R);
@@ -39,6 +39,6 @@ int main() {
     vector<string> led_matrix;
     vector<string> led_pattern;
     
-    readInput(rows, matrix_cols, pattern_cols, led_matrix, led_pattern);
+    read_input(rows, matrix_cols, pattern_cols, led_matrix, led_pattern);
     cout << solve(rows, matrix_cols, pattern_cols, led_matrix, led_pattern);
 }
