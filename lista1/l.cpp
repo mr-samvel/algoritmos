@@ -1,18 +1,19 @@
 #include <iostream>
 #include <string>
 #include <vector>
+using namespace std;
 
-void readInput(int &R, int &C, int &K, std::vector<std::string> &matrix, std::vector<std::string> &pattern) {
-    std::cin >> R >> C >> K;
+void readInput(int &R, int &C, int &K, vector<string> &matrix, vector<string> &pattern) {
+    cin >> R >> C >> K;
     
     matrix.resize(R);
     pattern.resize(R);
 
     for (int i = 0; i < R; i++)
-        std::cin >> matrix[i] >> pattern[i];
+        cin >> matrix[i] >> pattern[i];
 }
 
-char solve(int rows, int matrix_cols, int pattern_cols, std::vector<std::string> led_matrix, std::vector<std::string> led_pattern) {
+char solve(int rows, int matrix_cols, int pattern_cols, vector<string> led_matrix, vector<string> led_pattern) {
     bool row_has_failure = false;
     bool row_cant_fail = false;
     int max_cols = matrix_cols > pattern_cols ? matrix_cols : pattern_cols;
@@ -35,9 +36,9 @@ char solve(int rows, int matrix_cols, int pattern_cols, std::vector<std::string>
 
 int main() {
     int rows, matrix_cols, pattern_cols;
-    std::vector<std::string> led_matrix;
-    std::vector<std::string> led_pattern;
+    vector<string> led_matrix;
+    vector<string> led_pattern;
     
     readInput(rows, matrix_cols, pattern_cols, led_matrix, led_pattern);
-    std::cout << solve(rows, matrix_cols, pattern_cols, led_matrix, led_pattern);
+    cout << solve(rows, matrix_cols, pattern_cols, led_matrix, led_pattern);
 }
